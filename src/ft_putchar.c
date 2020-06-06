@@ -3,5 +3,8 @@
 
 int     ft_putchar(int c)
 {
-    return ft_putc(&c, STDOUT_FILENO);
+    unsigned char key;
+
+    key = (unsigned char)c;
+    return ft_putc(&key, STDOUT_FILENO);
 }

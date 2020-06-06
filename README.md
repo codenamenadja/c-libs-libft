@@ -4,7 +4,7 @@ Rules
 
 ### simple_libft.a
 
-**members**
+- **members**
     - ``void ft_putchar(char c);``
         - DESC
             ``putchar(c)`` is equivalent to ``putc(c, stdout)``  

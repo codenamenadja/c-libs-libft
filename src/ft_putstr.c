@@ -1,11 +1,13 @@
 #include <unistd.h>
-#include "libft.a"
 
 void    ft_putstr(char *str)
 {
     size_t      len;
 
-    len = ft_strlen(str);
+    len = 0;
+
+    while (*(str+len))
+        len++;
     if (len)
         write(STDOUT_FILENO, str, len);
 }

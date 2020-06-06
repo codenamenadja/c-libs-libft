@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    README.md                                          :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: jihhan <jihhan@student.42seoul.kr>         +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2020/06/06 15:28:29 by jihhan            #+#    #+#              #
-#    Updated: 2020/06/06 15:47:06 by jihhan           ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 Rules
     1. makesure appropriate permissions on files ans dirs
     1. compile options: -Wall -Wextra -Werror and use gcc

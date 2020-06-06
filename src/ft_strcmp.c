@@ -1,4 +1,4 @@
-int ft_strcmp(char *dest, char *src)
+int     ft_strcmp(char *dest, char *src)
 {
     while (*dest == *src)
     {

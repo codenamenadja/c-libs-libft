@@ -1,10 +1,10 @@
 #include <unistd.h>
 #define ft_putc(c, fd) (write(fd, c, 1))
 
-int     ft_putchar(char c)
+void    ft_putchar(char c)
 {
     unsigned char key;
 
     key = (unsigned char)c;
-    return ft_putc(&key, STDOUT_FILENO);
+    ft_putc(&key, STDOUT_FILENO);
 }

@@ -1,7 +1,7 @@
 #include <unistd.h>
 #define ft_putc(c, fd) (write(fd, c, 1))
 
-int     ft_putchar(int c)
+int     ft_putchar(char c)
 {
     unsigned char key;
 

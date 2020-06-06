@@ -3,7 +3,7 @@
 
 void    ft_putchar(char c)
 {
-    unsigned char key;
+    unsigned char   key;
 
     key = (unsigned char)c;
     ft_putc(&key, STDOUT_FILENO);

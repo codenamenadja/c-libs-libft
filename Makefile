@@ -17,9 +17,14 @@ $(NAME): $(OBJECTS)
 	ar rcs $@ $(OBJECTS)
 	ranlib $@
 
+.PHONY: test
+test: test.c
+	$(CC) -Werror -Wextra -Wall $^ $(NAME) -o exe_test
+
 .PHONY: clean
 clean:
 	@/bin/rm -f $(OBJECTS)
+	@/bin/rm -f exe_test
 
 .PHONY: fclean
 fclean: clean

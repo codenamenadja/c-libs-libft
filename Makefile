@@ -3,7 +3,7 @@ CFLAGS				= -Wall -Werror -Wextra -I. -c
 .DEFALT_GOAL		:= all
 NAME				= libft.a
 
-SOURCES				= $(wildcard src/ft_*.c)
+V1_SOURCES			= $(wildcard src/v1/ft_*.c)
 HEADERS				= $(wildcard includes/*.h)
 OBJECTS				= $(patsubst %.c, %.o, $(SOURCES))
 

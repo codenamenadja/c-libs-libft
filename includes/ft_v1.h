@@ -1,5 +1,5 @@
-#ifndef __LIBFT_H
-# define __LIBFT_H
+#ifndef __LIBFT_V1_H
+# define __LIBFT_V1_H
 void ft_putchar(char c);
 void ft_swap(int *a, int *b);
 void ft_putstr(char *str);

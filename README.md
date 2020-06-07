@@ -2,9 +2,9 @@ Rules
     1. makesure appropriate permissions on files ans dirs
     1. compile options: -Wall -Wextra -Werror and use gcc
 
-### simple_libft.a
+### versions and members
 
-- **members**
+- **v1**
     - ``void ft_putchar(char c);``
         - DESC
             - ``putchar(c)`` is equivalent to ``putc(c, stdout)``  
@@ -26,7 +26,10 @@ Rules
         - RETURNS
             - decreased from s1 by s2 for diff bytes.  
             if they were ended equally, returns 0.
-
+- **v2**
+    - ``char **ft_split(char *str, char *charset);``
+        - DESC
+    - ``char *ft_strdup(char *s);``
 
 ### additional
 

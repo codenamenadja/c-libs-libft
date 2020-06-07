@@ -3,9 +3,10 @@ CFLAGS				= -Wall -Werror -Wextra -I. -c
 .DEFALT_GOAL		:= all
 NAME				= libft.a
 
-V1_SOURCES			= $(wildcard src/v1/ft_*.c)
+SOURCES				= $(wildcard srcs/v*/ft_*.c)
 HEADERS				= $(wildcard includes/*.h)
 OBJECTS				= $(patsubst %.c, %.o, $(SOURCES))
+V1_TESTS			= $(wildcard tests/v1/test_*.c)
 
 #DEP					= $(wildcard includes/*.h)
 #-include			$(DEP)
@@ -17,18 +18,18 @@ $(NAME): $(OBJECTS)
 	ar rcs $@ $(OBJECTS)
 	ranlib $@
 
-.PHONY: test
-test: test.c
-	$(CC) -Werror -Wextra -Wall $^ $(NAME) -o exe_test
+.PHONY: test_v1
+test_v1: $(V1_TESTS)
+	$(CC) -Werror -Wextra -Wall $^ $(NAME) -o tests/v1/test.out
 
 .PHONY: clean
 clean:
-	@/bin/rm -f $(OBJECTS)
-	@/bin/rm -f exe_test
+	/bin/rm -f $(OBJECTS)
+	/bin/rm -f tests/*/*.out
 
 .PHONY: fclean
 fclean: clean
-	@/bin/rm -f $(NAME)
+	/bin/rm -f $(NAME)
 
 .PHONY: re
 re: fclean all

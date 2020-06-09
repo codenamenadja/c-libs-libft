@@ -16,7 +16,7 @@ char    **ft_split(const char *str, const char *charset)
     start = str;
     if (!ft_strncmp(start, charset, charset_len))
         start += charset_len;
-    while ((found = ft_strchr(start, *charset)))
+    while ((found = ft_strchr(start, *charset)) && *found)
     {
         if (!ft_strncmp(found, charset, charset_len))
         {
@@ -28,6 +28,7 @@ char    **ft_split(const char *str, const char *charset)
     if (*start)
         buf[i++] = ft_strdup(start);
     res = (char **)malloc(sizeof(char *) * i);
+    *(res + i) = NULL;
     while(i--)
         *(res+i) = *(buf+i);
     return (res);

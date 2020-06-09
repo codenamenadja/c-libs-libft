@@ -13,4 +13,5 @@ char *ft_strrchr(const char *s, int c);
 char *ft_strnchr(const char *s, int c, size_t n);
 
 char *ft_strdup(const char *s);
+char *ft_strndup(const char *s, size_t n);
 #endif

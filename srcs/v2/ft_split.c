@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include "../../includes/ft_v1.h"
 
@@ -5,33 +6,29 @@ char    **ft_split(const char *str, const char *charset)
 {
     int             i;
     size_t          charset_len;
+    char            *buf[BUFSIZ];
+    const char      *start;
+    const char      *found;
     char            **res;
-    char            *str_buf[BUFSIZ];
-    const char      *pt_buf[BUFSIZ];
 
+    i = 0;
     charset_len = ft_strlen(charset);
-    i = 0;
-    pt_buf[i] = str;
-    while (pt_buf[i])
+    start = str;
+    if (!ft_strncmp(start, charset, charset_len))
+        start += charset_len;
+    while ((found = ft_strchr(start, *charset)))
     {
-        pt_buf[i+1] = (const char*)ft_strchr(pt_buf[i], *charset); 
-        if(!pt_buf[i+1])
-            break;
-        if(ft_strncmp(pt_buf[i+1], charset, charset_len))
-            pt_buf[i + 1] = NULL;
-        i+=2;
+        if (!ft_strncmp(found, charset, charset_len))
+        {
+            buf[i++] = ft_strndup(start, (found - start));
+            start = found + charset_len;
+        } else
+        start = (found + 1);
     }
-    i = 0;
-    while(pt_buf[i+1] != NULL)
-    {
-        str_buf[i] = malloc(sizeof(char) *
-                (pt_buf[i+1] - pt_buf[i] + 1));
-
-    }
-    res = (char *)malloc(i)
-
+    if (*start)
+        buf[i++] = ft_strdup(start);
+    res = (char **)malloc(sizeof(char *) * i);
+    while(i--)
+        *(res+i) = *(buf+i);
+    return (res);
 }
-
-/*
-**
-*/

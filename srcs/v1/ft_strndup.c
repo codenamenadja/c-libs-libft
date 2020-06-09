@@ -3,15 +3,19 @@
 
 char    *ft_strndup(const char *s, size_t len)
 {
-    ssize_t  i;
+    size_t  i;
     char    *pt;
 
     pt = malloc((len + 1) * sizeof(char));
     if (!pt)
         return (NULL);
-    i = -1;
-    while (++i < len)
+    i = 0;
+    while (i < len)
+    {
         *(pt + i) = *(s + i);
+        i++;
+    }
+
     *(pt + i) = '\0';
     return (pt);
 }

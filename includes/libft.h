@@ -1,5 +1,5 @@
-#ifndef __LIBFT_V1_H
-# define __LIBFT_V1_H
+#ifndef __LIBFT__H
+# define __LIBFT__H
 #include <unistd.h>
 int ft_strlen(const char *str);
 int ft_strcmp(const char *s1, const char *s2);

@@ -1,4 +1,6 @@
-#include "../test.h"
+#include <stdlib.h>
+#include "../includes/libft.h"
+#include "dbg.h"
 unsigned char test_strdup(char *s)
 {
     char *deep_copy = ft_strdup(s);
@@ -12,3 +14,4 @@ error:
     free(deep_copy);
     return (EXIT_FAILURE);
 }
+

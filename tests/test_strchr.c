@@ -1,4 +1,6 @@
-#include "../test.h"
+#include <stdlib.h>
+#include "../includes/libft.h"
+#include "dbg.h"
 
 unsigned char test_strchr(const char *str, int c)
 {    

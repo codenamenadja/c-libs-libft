@@ -1,5 +1,5 @@
 CC					= gcc
-CFLAGS				= -Wall -Werror -Wextra -I. -c
+CFLAGS				= -Wall -Werror -Wextra -Iincludes/ -c
 .DEFALT_GOAL		:= all
 NAME				= libft.a
 

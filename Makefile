@@ -9,9 +9,6 @@ OBJECTS				= $(patsubst %.c, %.o, $(SOURCES))
 V1_TESTS			= $(wildcard tests/v1/*.c)
 V2_TESTS			= $(wildcard tests/v2/*.c)
 
-#DEP					= $(wildcard includes/*.h)
-#-include			$(DEP)
-
 .PHONY: all
 all: $(NAME)
 

@@ -27,57 +27,116 @@ makefile
 header
 ------
 
-   .. literalinclude:: literalincludes/libft.h
-      :language: c
-      :encoding: latin-1
+   .. code-block:: c
 
-test
-----
+      int ft_strlen(const char *str);
+      int ft_strcmp(const char *s1, const char *s2);
+      int ft_strncmp(const char *s1, const char *s2, size_t n);
+      int ft_putchar(char c);
 
-   .. literalinclude:: tests/test_main.c
-      :language: c
-      :encoding: latin-1
+      void ft_swap(int *a, int *b);
+      void ft_putstr(char *str);
 
-content
--------
+      char *ft_strchr(const char *s, int c);
+      char *ft_strrchr(const char *s, int c);
+      char *ft_strnchr(const char *s, int c, size_t n);
 
-   .. literalinclude:: srcs/ft_putchar.c
-      :language: c
-      :encoding: latin-1
+      char *ft_strdup(const char *s);
+      char *ft_strndup(const char *s, size_t n);
 
-   .. literalinclude:: srcs/ft_strchr.c
-      :language: c
-      :encoding: latin-1
+functions
+---------
 
-   .. literalinclude:: srcs/ft_strcmp.c
-      :language: c
-      :encoding: latin-1
+``ft_putchar``::
 
-   .. literalinclude:: srcs/ft_strdup.c
-      :language: c
-      :encoding: latin-1
+   - DESC: act like origin ``putchar`` , put argument ``char c`` to stdout.
+           as written in manual, ``ft_putchar`` uses cutom macro ``ft_putc`` defined in same file.
+           it's said to internally converts ``c`` to ``unsigned char`` and return as ``int``
 
-   .. literalinclude:: srcs/ft_strlen.c
-      :language: c
-      :encoding: latin-1
+   - DEPENDS: ``<unistd.h>`` ``<stdio.h>``
+   - RETURNS:
 
-   .. literalinclude:: srcs/ft_strnchr.c
-      :language: c
-      :encoding: latin-1
+      - success: argument ``c`` to int
+      - failure: EOF on error
 
-   .. literalinclude:: srcs/ft_strncmp.c
-      :language: c
-      :encoding: latin-1
+``ft_strchr``::
 
-   .. literalinclude:: srcs/ft_strndup.c
-      :language: c
-      :encoding: latin-1
+   - DESC: 
+   - DEPENDS: 
+   - RETURNS:
 
-   .. literalinclude:: srcs/ft_strrchr.c
-      :language: c
-      :encoding: latin-1
+      - success: 
+      - failure: 
 
-   .. literalinclude:: srcs/ft_swap.c
-      :language: c
-      :encoding: latin-1
+``ft_strcmp``::
+
+   - DESC: 
+   - DEPENDS: 
+   - RETURNS:
+
+      - success: 
+      - failure: 
+
+``ft_strdup``::
+
+   - DESC: 
+   - DEPENDS: 
+   - RETURNS: 
+
+      - success: 
+      - failure: 
+
+``ft_strlen``::
+
+   - DESC: 
+   - DEPENDS: 
+   - RETURNS: 
+
+      - success: 
+      - failure: 
+
+``ft_strnchr``::
+
+   - DESC: 
+   - DEPENDS: 
+   - RETURNS: 
+
+      - success: 
+      - failure: 
+
+``ft_strncmp``::
+
+   - DESC: 
+   - DEPENDS: 
+   - RETURNS: 
+
+      - success: 
+      - failure: 
+
+``ft_strndup``::
+
+   - DESC: 
+   - DEPENDS: 
+   - RETURNS: 
+
+      - success: 
+      - failure: 
+
+``ft_strrchr``::
+
+   - DESC: 
+   - DEPENDS: 
+   - RETURNS: 
+
+      - success: 
+      - failure: 
+
+``ft_swap``::
+
+   - DESC: 
+   - DEPENDS: 
+   - RETURNS: 
+
+      - success: 
+      - failure: 
 

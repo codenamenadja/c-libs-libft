@@ -1,6 +1,8 @@
 libft
 =====
 
+[SOURCE]: https://github.com/languagenamenadja/c-libs-libft
+
 intro
 -----
 
@@ -8,7 +10,7 @@ This package is a project to mimic Glibc's string manipulate functions.
 its easy discriminate that diff from this and addtionals is this non using malloc or pointer array excepts ``strdup`` function.
 functions in this lib usually manipulate the value in pointer.
 
-.. code-block:: bash
+.. language-block:: bash
 
    make
    make test
@@ -18,64 +20,64 @@ functions in this lib usually manipulate the value in pointer.
 makefile
 --------
 
-   .. include:: Makefile
-      :code: makefile
+   .. literalinclude:: Makefile
+      :language: makefile
       :encoding: latin-1
 
 header
 ------
 
-   .. include:: includes/libft.h
-      :code: c
+   .. literalinclude:: literalincludes/libft.h
+      :language: c
       :encoding: latin-1
 
 test
 ----
 
-   .. include:: tests/test_main.c
-      :code: c
+   .. literalinclude:: tests/test_main.c
+      :language: c
       :encoding: latin-1
 
 content
 -------
 
-   .. include:: srcs/ft_putchar.c
-      :code: c
+   .. literalinclude:: srcs/ft_putchar.c
+      :language: c
       :encoding: latin-1
 
-   .. include:: srcs/ft_strchr.c
-      :code: c
+   .. literalinclude:: srcs/ft_strchr.c
+      :language: c
       :encoding: latin-1
 
-   .. include:: srcs/ft_strcmp.c
-      :code: c
+   .. literalinclude:: srcs/ft_strcmp.c
+      :language: c
       :encoding: latin-1
 
-   .. include:: srcs/ft_strdup.c
-      :code: c
+   .. literalinclude:: srcs/ft_strdup.c
+      :language: c
       :encoding: latin-1
 
-   .. include:: srcs/ft_strlen.c
-      :code: c
+   .. literalinclude:: srcs/ft_strlen.c
+      :language: c
       :encoding: latin-1
 
-   .. include:: srcs/ft_strnchr.c
-      :code: c
+   .. literalinclude:: srcs/ft_strnchr.c
+      :language: c
       :encoding: latin-1
 
-   .. include:: srcs/ft_strncmp.c
-      :code: c
+   .. literalinclude:: srcs/ft_strncmp.c
+      :language: c
       :encoding: latin-1
 
-   .. include:: srcs/ft_strndup.c
-      :code: c
+   .. literalinclude:: srcs/ft_strndup.c
+      :language: c
       :encoding: latin-1
 
-   .. include:: srcs/ft_strrchr.c
-      :code: c
+   .. literalinclude:: srcs/ft_strrchr.c
+      :language: c
       :encoding: latin-1
 
-   .. include:: srcs/ft_swap.c
-      :code: c
+   .. literalinclude:: srcs/ft_swap.c
+      :language: c
       :encoding: latin-1
 

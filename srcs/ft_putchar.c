@@ -7,13 +7,8 @@ int ft_putchar(char c)
     unsigned char   key;
 
     key = (unsigned char)c;
-    if (EOF == ft_putc(&key, STDOUT_FILENO))
+    if (ft_putc(&key, STDOUT_FILENO) != 1)
         return (EOF);
 
     return ((int)key);
-}
-
-int main()
-{
-    ft_putchar('a');
 }

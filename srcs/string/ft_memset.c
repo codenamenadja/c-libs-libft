@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jihhan <junehan.dev@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/04 16:23:46 by jihhan            #+#    #+#             */
-/*   Updated: 2020/09/04 16:23:48 by jihhan           ###   ########.fr       */
+/*   Created: 2020/09/03 15:41:14 by jihhan            #+#    #+#             */
+/*   Updated: 2020/09/04 13:22:05 by jihhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-size_t  ft_strlen(const char *str)
+void *ft_memset(void *s, int c, size_t n)
 {
-    size_t res;
+    char    *s_pt;
+    char    key;
+    size_t  i;
 
-    res = 0;
-    while (*(str + res))
-        res++;
-    return (res);
+    key         = (char)c;
+    s_pt        = (char *)s;
+    i           = 0;
+
+    while (i < n && *(s_pt + i))
+    {
+        *(s_pt + i) = key;
+        i++;
+    }
+    return (s);
 }

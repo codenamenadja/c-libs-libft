@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jihhan <junehan.dev@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/04 16:23:46 by jihhan            #+#    #+#             */
-/*   Updated: 2020/09/04 16:23:48 by jihhan           ###   ########.fr       */
+/*   Created: 2020/09/03 14:55:16 by jihhan            #+#    #+#             */
+/*   Updated: 2020/09/03 16:32:12 by jihhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-size_t  ft_strlen(const char *str)
+void        ft_bzero(void *s, size_t n)
 {
-    size_t res;
+    char    *s_pt;
+    size_t  i;
 
-    res = 0;
-    while (*(str + res))
-        res++;
-    return (res);
+    i = 0;
+    s_pt = s;
+    while (i < n && *(s_pt + i))
+        *(s_pt+i++) = 0;
 }

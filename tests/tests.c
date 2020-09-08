@@ -8,7 +8,6 @@ int main(void)
     int failure = 0;
     printf("1. test start\n");
 
-    /*
     printf("2. test ft_memchr start\n");
     test_ft_memchr() ? failure++ : success++;
     printf("2. test ft_memchr end\n\n\n");
@@ -17,10 +16,17 @@ int main(void)
     test_ft_memmove() ? failure++ : success++;
     printf("3. test ft_memmove end\n\n\n");
 
-    */
     printf("4. test_ft_memcmp start\n");
     test_ft_memcmp() ? failure++ : success++;
     printf("4. test ft_memcmp end\n\n\n");
+
+    printf("5. test_ft_memset start\n");
+    test_ft_memset() ? failure++ : success++;
+    printf("5. test ft_memset end\n\n\n");
+
+    printf("6. test_ft_bzero start\n");
+    test_ft_bzero() ? failure++ : success++;
+    printf("6. test ft_bzero end\n\n\n");
 
     printf("Success: %d, Failure: %d", success, failure);
     if (failure)

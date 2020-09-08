@@ -6,7 +6,7 @@
 /*   By: jihhan <junehan.dev@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 16:35:47 by jihhan            #+#    #+#             */
-/*   Updated: 2020/09/04 13:24:56 by jihhan           ###   ########.fr       */
+/*   Updated: 2020/09/09 08:06:20 by jihhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void        *ft_memmove(void *dest, const void *src, size_t n)
 
     i = 0;
 
-    while (*(dest_pt + i) && i < n)
+    while (i < n)
     {
         *(dest_pt + i) = *(buf + i);
         i++;

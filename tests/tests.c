@@ -28,6 +28,15 @@ int main(void)
     test_ft_bzero() ? failure++ : success++;
     printf("6. test ft_bzero end\n\n\n");
 
+    printf("7. test_ft_memcpy start\n");
+    test_ft_memcpy() ? failure++ : success++;
+    printf("7. test ft_memcpy end\n\n\n");
+
+    printf("8. test_ft_memccpy start\n");
+    test_ft_memccpy() ? failure++ : success++;
+    printf("8. test ft_memccpy end\n\n\n");
+
+
     printf("Success: %d, Failure: %d", success, failure);
     if (failure)
         return 1;

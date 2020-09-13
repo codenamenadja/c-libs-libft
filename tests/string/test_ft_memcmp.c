@@ -7,7 +7,6 @@
 int test_ft_memcmp(void)
 {
     char        s1[32]      = {0};
-    char        n_str[3]    = {0};
     char        s2[32]      = {0}; 
     int         n;
     int         res;
@@ -23,9 +22,8 @@ int test_ft_memcmp(void)
     check((scanf("%s", s2)), "scanf error.");
 
     printf("nbyte to memcmp?: ");
-    scanf("%s", n_str);
+    scanf("%d", &n);
     printf("\n");
-    n = atoi(n_str);
     printf("s1: '%s'\ns2: '%s'. cmp in %d bytes...\n", s1, s2, n);
 
     origin = memcmp(s1, s2, n);

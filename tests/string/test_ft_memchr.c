@@ -7,7 +7,6 @@
 int test_ft_memchr(void)
 {
     char        s[32]       = {0};
-    char        n_str[3]    = {0};
     char        c[1];
     int         n;
     char        *res;
@@ -16,16 +15,15 @@ int test_ft_memchr(void)
     log_info("START");
     printf("s str input in len 31: ");
     printf("\n");
-    check((scanf("%s", s)), "scanf error");
+    check(EOF != (scanf("%s", s)), "scanf error");
 
     printf("c character input to find: ");
     printf("\n");
-    check((scanf("%s", c)), "scanf error");
+    check(EOF != (scanf("%s", c)), "scanf error");
 
     printf("nbyte to scan?: ");
-    check((scanf("%s", n_str)), "scanf error");
+    check(EOF != (scanf("%d", &n)), "scanf error");
     printf("\n");
-    n = atoi(n_str);
     printf("s: '%s'\nkey: '%c'. find in %d bytes...\n", s, *c, n);
 
     origin = (char *)memchr(s, *c, n);

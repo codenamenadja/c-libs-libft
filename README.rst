@@ -44,8 +44,25 @@ header
       char *ft_strdup(const char *s);
       char *ft_strndup(const char *s, size_t n);
 
+      int ft_iseven(int c);
+
 functions
 ---------
+
+ft_ctype
+^^^^^^^^
+
+``ft_iseven``::
+
+   - DESC: check parameter c to even or odd. internally converts c to unsigned integer.
+   - DEPENDS: None
+   - RETURNS:
+
+      - success: 1 on even 0 on odd.
+      - failure: -1 on 0.
+
+ft_stdio
+^^^^^^^^
 
 ``ft_putchar``::
 
